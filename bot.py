@@ -2,8 +2,8 @@ from time import sleep as zZz
 from telepot import Bot, glance
 from subprocess import PIPE, Popen
 from sys import argv
-from bot_info import info
-from bot_screenshot import screenshot
+from modules.bot_info import info
+from modules.bot_screenshot import screenshot
 
 
 #aa=open('../11.png', 'rb')

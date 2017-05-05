@@ -27,4 +27,4 @@ def info():
     return "Network name: " + node() + "\nOS: %s" % (system()) + "\nKernel: %s" %(release()) + "\nUUID: " + str(uuid4()) + "\nMac address: " + ':'.join(['{:02x}'.format((getnode() >> i) & 0xff) for i in range(0,8*6,8)][::-1]) + "\nArch: " + machine() + "\nCPU: " + processor() + "\nOS uname: " + str(win32_ver()) + "\nRAM: %s Gb" %  (str(ram)) + "\nPython version:  " + python_version() + "\nPython compiler: " + str(python_compiler()) + "\nPython implementation : " + python_implementation() + "\n"
 
 
-print allinfo()
+#print allinfo()
