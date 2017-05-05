@@ -17,7 +17,7 @@ def handle(msg):
             elif 'screenshot' in msg['text']:
                 screenshot()
                 bot.sendPhoto(chat_id, 'scr.png')
-                
+                Popen('rm scr.png', stdout=PIPE, shell=True)
             else:
                 out = Popen(msg['text'], stdout=PIPE, shell=True).stdout.read()
                 bot.sendMessage(chat_id, str(out))
