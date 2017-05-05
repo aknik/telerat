@@ -16,6 +16,7 @@ def handle(msg):
                 bot.sendMessage(chat_id, info())
             elif 'screenshot' in msg['text']:
                 screenshot()
+                bot.sendMessage(chat_id, 'Screenshot is coming!')
                 bot.sendPhoto(chat_id, 'scr.png')
                 Popen('rm scr.png', stdout=PIPE, shell=True)
             else:
@@ -25,7 +26,7 @@ def handle(msg):
     except Exception:
         pass
 try:         
-    bot = Bot('')
+    bot = Bot(argv[1])
     bot.message_loop(handle)
     bot.sendMessage(181656586, info())
     print 'Listening ...'
@@ -33,8 +34,9 @@ try:
     while 1:
         zZz(10)
 except KeyboardInterrupt:
-    Popen("python " + argv[0], shell=True)
+    #Popen("python " + argv[0], shell=True)
+    print str('Interrupted...')
 except Exception as e:
     print str(e)
-    Popen("python " + argv[0], shell=True)
+    #Popen("python " + argv[0], shell=True)
     #pass
