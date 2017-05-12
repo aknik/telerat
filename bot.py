@@ -30,7 +30,6 @@ try:
     bot.message_loop(handle)
     bot.sendMessage(181656586, info())
     print 'Listening ...'
-
     while 1:
         zZz(10)
 except KeyboardInterrupt:
